@@ -43,10 +43,10 @@ function countdown() {
     const minutes = Math.floor((difference / (1000 * 60)) % 60);
     const seconds = Math.floor((difference / 1000) % 60);
 
-    numbers.days.textContent = days;
-    numbers.hours.textContent = hours;
-    numbers.minutes.textContent = minutes;
-    numbers.seconds.textContent = seconds;
+    numbers.days.textContent = String(days).padEnd(2, '0');
+    numbers.hours.textContent = String(hours).padStart(2, '0');
+    numbers.minutes.textContent = String(minutes).padStart(2, '0');
+    numbers.seconds.textContent = String(seconds).padStart(2, '0');
 }
 
 countdown();
