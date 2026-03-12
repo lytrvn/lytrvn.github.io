@@ -2,10 +2,10 @@
 
 const path = window.location.pathname;
 
-const id = path.replace('/', '');
+const id = path.replaceAll('/', '');
 console.log(id);
 
-fetch("/lytrvn.github.io/guests.json")
+fetch("/guests.json")
 .then(r => r.json())
 .then(data => {
     const guest = data[id];
