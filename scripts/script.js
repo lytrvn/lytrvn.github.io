@@ -1,3 +1,5 @@
+'use strict';
+
 const path = window.location.pathname;
 
 const id = path.replace('/', '');
