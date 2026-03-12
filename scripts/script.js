@@ -10,7 +10,6 @@ fetch("/guests.json")
 .then(data => {
     const guest = data[id];
     if(!guest) {
-        document.querySelector('.guest-name').textContent = 'Дорогой гость!';
         return;
     }
     document.querySelector('.guest-name').textContent = guest.name;
