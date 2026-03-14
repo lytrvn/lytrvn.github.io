@@ -171,3 +171,77 @@ html {
     border-radius: 0 0 10px 10px;
     background-image: linear-gradient(#56565600 0%, #2A2A2A8C 55%, #000000 100%);
 }
+
+/* section */
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.section__title {
+    font-family: 'Atziluth', serif;
+    font-size: 2.8rem;
+    line-height: 1em;
+    letter-spacing: .01em;
+}
+
+.section--biege .section__title {
+    color: var(--color-accent);
+}
+
+.section__title--guest {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.section__text {
+    font-family: 'Philosopher', serif;
+    font-size: 1rem;
+    line-height: 1.4em;
+    letter-spacing: .01em;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+.section__text--centered {
+    text-align: center;
+}
+
+/* framed image */
+
+.framed {
+    position: relative;
+    min-height: 200px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    background-image: url('/images/e54f475a7bf365755ae9d8dcbc97b50ce374b4fe.jpg');
+    background-position: 50% 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.framed::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 0 0 10px 10px;
+    background-color: #00000066;
+    z-index: 0;
+}
+
+.framed svg {
+    position: absolute;
+    transform: scaleX(1.05);
+    right: 0;
+    bottom: 0;
+}
+

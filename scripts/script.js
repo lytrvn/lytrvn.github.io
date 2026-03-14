@@ -25,7 +25,7 @@ const numbers = {
         seconds: document.getElementById('seconds')
 };
 
-const weddingDate = new Date('2026-04-24T15:00:00');
+const weddingDate = new Date('2026-04-24T13:00:00');
 
 function countdown() {
     const currentDate = new Date();
