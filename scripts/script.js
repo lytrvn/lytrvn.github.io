@@ -19,7 +19,7 @@ fetch("/guests.json")
     document.querySelector('.guest-name').textContent = fullName;
 })
 
-counter
+// counter
 
 const numbers = {
         days: document.getElementById('days'),
