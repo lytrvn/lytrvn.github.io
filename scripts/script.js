@@ -15,7 +15,7 @@ fetch("/guests.json")
     if(!guest) {
         return;
     }
-    document.querySelector('.section__title--guest').textContent = greeting;
+    document.querySelector('.guest-greeting').textContent = greeting;
     document.querySelector('.guest-name').textContent = fullName;
 })
 
