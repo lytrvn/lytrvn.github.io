@@ -10,10 +10,13 @@ fetch("/guests.json")
 .then(r => r.json())
 .then(data => {
     const guest = data[id];
+    const [greeting, ...nameParts] = guest.name.split(' ');
+    const fullName = nameParts.join(' ');
     if(!guest) {
         return;
     }
-    document.querySelector('.guest-name').textContent = guest.name;
+    document.querySelector('.section__title--guest').textContent = greeting;
+    document.querySelector('.guest-name').textContent = fullName;
 })
 
 // counter
