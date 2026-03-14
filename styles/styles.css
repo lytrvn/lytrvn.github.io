@@ -1,11 +1,173 @@
+/* fonts */
+
+@font-face {
+    font-family: 'Atziluth';
+    src: url('../fonts/Atziluth-Script_1.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Custodia Deco';
+    src: url('../fonts/Custodia\ Deco.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Philosopher';
+    src: url('../fonts/Philosopher-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/PlayfairDisplay.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
 /* general */
 
 * {
     box-sizing: border-box;
     margin: 0;
+    font-weight: initial;
+}
+
+html {
+    font-size: 14px;
+}
+
+:root {
+    --color-background: #ECDDD3;
+    --color-primary: #FFFFFF;
+    --color-secondary: #EBD4AB;
+    --color-text: #394345;
+    --color-accent: #903636; 
 }
 
 .content {
     margin: 0 auto;
     max-width: 480px;
+    background-color: var(--color-background);
+}
+
+/* hero */
+
+.hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 540px;
+    height: 100vh;
+    padding: 30px 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+.hero::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 0 0 10px 10px;
+    background-color: #00000066;
+    z-index: 0;
+}
+
+.hero__title {
+    position: relative;
+    font-family: 'Atziluth', serif;
+    font-size: 5.5rem;
+    line-height: .9em;
+    color: var(--color-primary);
+    width: 100%;
+    z-index: 1;
+}
+
+.hero__title .conjunction {
+    position: absolute;
+    margin-left: 24px;
+    top: 18px;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.hero__date {
+    font-family: 'Atziluth', serif;
+    font-size: 3.5rem;
+    line-height: 1em;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.hero__subtitle {
+    font-family: 'Custodia Deco', serif;
+    font-size: 2rem;
+    line-height: 1em;
+    letter-spacing: .02em;
+    text-align: center;
+    color: var(--color-background);
+    margin-bottom: 10px;
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.counter__item {
+    text-align: center;
+    justify-items: center;
+    flex: 0 0 25%;
+}
+
+.counter__item-number {
+    font-family: 'Atziluth', serif;
+    font-size: 3.5rem;
+    line-height: 1em;
+    letter-spacing: .01em;
+    width: 2ch;
+    color: var(--color-background);
+}
+
+.counter__item-text {
+    font-family: 'Custodia Deco', serif;
+    font-size: 1.4rem;
+    line-height: 1em;
+    letter-spacing: .01em;
+    color: var(--color-accent);
+}
+
+.hero__overlay {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+    max-height: 220px;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 0 0 10px 10px;
+    background-image: linear-gradient(#56565600 0%, #2A2A2A8C 55%, #000000 100%);
 }
