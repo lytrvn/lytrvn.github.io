@@ -65,6 +65,7 @@ html {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -80,6 +81,7 @@ html {
     position: absolute;
     top: 0;
     height: 100%;
+    min-height: inherit;
     width: 100%;
     max-width: 480px;
     border-radius: 0 0 10px 10px;
@@ -150,6 +152,7 @@ html {
     letter-spacing: .01em;
     width: 2ch;
     color: var(--color-background);
+    margin: 0 auto;
 }
 
 .counter__item-text {
