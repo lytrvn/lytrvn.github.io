@@ -25,6 +25,14 @@
 }
 
 @font-face {
+    font-family: 'Philosopher Bold';
+    src: url('../fonts/Philosopher\ Bold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Playfair Display';
     src: url('../fonts/PlayfairDisplay.woff2') format('woff2');
     font-style: normal;
@@ -97,6 +105,7 @@ html {
     line-height: .9em;
     color: var(--color-primary);
     width: 100%;
+    max-width: 320px;
     z-index: 1;
 }
 
@@ -335,7 +344,7 @@ html {
 .schedule__item {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-content: center;
     column-gap: 16px;
     width: 100%;
@@ -353,10 +362,11 @@ html {
     align-items: center;
     flex-grow: 1;
     row-gap: 5px;
+    max-width: 236px;
 }
 
 .schedule__title {
-    font-family: 'Philosopher', serif;
+    font-family: 'Philosopher Bold', serif;
     font-size: 1rem;
     line-height: 1em;
     letter-spacing: .02em;

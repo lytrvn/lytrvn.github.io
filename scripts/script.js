@@ -54,11 +54,3 @@ function countdown() {
 
 countdown();
 const timeInterval = window.setInterval(countdown, 1000);
-
-// divider position
-
-const numberWidth = document.querySelector('.item__number').offsetWidth;
-const divider = document.querySelector('.divider');
-
-divider.style.left = `${numberWidth + 27}px`;
-
