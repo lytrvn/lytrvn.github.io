@@ -267,6 +267,7 @@ html {
 
 .section__list {
     padding-inline-start: 20px;
+    margin: 0 auto;
 }
 
 .list__item {
@@ -378,7 +379,7 @@ html {
 .schedule__address {
     font-family: 'Philosopher', serif;
     font-size: .7rem;
-    line-height: 1em;
+    line-height: 1.2em;
     letter-spacing: .02em;
     color: var(--color-text);
     text-align: center;
